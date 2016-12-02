@@ -57,6 +57,16 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     init.target.rc \
     ueventd.universal5420.rc
+    
+# Radio
+
+PRODUCT_PACKAGES += \
+    libril \
+    librilutils \
+    rild \
+    libxml2 \
+    libprotobuf-cpp-full \
+    modemloader
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/klimtwifi/klimtwifi-vendor.mk)
