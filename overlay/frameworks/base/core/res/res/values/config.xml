@@ -73,5 +73,11 @@
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
     <integer name="config_deviceHardwareWakeKeys">65</integer>
+     
+    <!-- This device is not "voice capable"; it's data-only. -->
+    <bool name="config_voice_capable">false</bool>
 
+    <!-- This device does not allow sms service. -->
+    <bool name="config_sms_capable">false</bool>
+     
 </resources>
