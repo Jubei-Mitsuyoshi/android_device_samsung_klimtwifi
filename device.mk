@@ -61,12 +61,8 @@ PRODUCT_PACKAGES += \
 # Radio
 
 PRODUCT_PACKAGES += \
-    libril \
-    librilutils \
-    rild \
     libxml2 \
-    libprotobuf-cpp-full \
-    modemloader
+    libprotobuf-cpp-full
 
 # call the proprietary setup
 $(call inherit-product, vendor/samsung/klimtwifi/klimtwifi-vendor.mk)
