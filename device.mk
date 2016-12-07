@@ -43,9 +43,6 @@ TARGET_BOOTANIMATION_HALF_RES := true
 TARGET_SCREEN_HEIGHT := 2560
 TARGET_SCREEN_WIDTH := 1600
 
-PRODUCT_PACKAGES += \
-    libsamsung_symbols
-
 # boringssl-compat
 PRODUCT_PACKAGES += \
     libboringssl-compat
@@ -180,7 +177,9 @@ PRODUCT_PACKAGES += \
 # Radio (needed for audio controls even on wifi-only)
 PRODUCT_PACKAGES += \
     libsecril-client \
-    libsecril-client-sap
+    libsecril-client-sap \
+    libxml2 \
+    libprotobuf-cpp-full
 
 # Recovery
 PRODUCT_PACKAGES += \
