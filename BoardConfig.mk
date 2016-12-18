@@ -80,6 +80,8 @@ BOARD_USES_SKIA_FIMGAPI := true
 # Graphics
 USE_OPENGL_RENDERER := true
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
+TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
+TARGET_BOOTANIMATION_MULTITHREAD_DECODE := true
 
 # Mixer
 BOARD_USE_BGRA_8888 := true
@@ -94,11 +96,14 @@ BOARD_USES_HWC_SERVICES := true
 TARGET_SPECIFIC_HEADER_PATH := $(LOCAL_PATH)/include
 
 # Hardware
-#BOARD_HARDWARE_CLASS += hardware/samsung/cmhw
 BOARD_HARDWARE_CLASS += device/samsung/klimtwifi/cmhw
 
 # Keymaster
 BOARD_USES_TRUST_KEYMASTER := true
+
+# Extended filesystem support
+TARGET_KERNEL_HAVE_EXFAT := true
+TARGET_KERNEL_HAVE_NTFS := true
 
 # Media
 COMMON_GLOBAL_CFLAGS += -DUSE_NATIVE_SEC_NV12TILED # use format from fw/native
