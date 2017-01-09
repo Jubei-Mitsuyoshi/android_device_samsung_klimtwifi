@@ -12,22 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH:= $(call my-dir)
+
+LOCAL_PATH := $(call my-dir)
+
 
 include $(CLEAR_VARS)
 
-LOCAL_PACKAGE_NAME := validityService
-
-LOCAL_SRC_FILES := $(call all-java-files-under, src)
-
-LOCAL_RESOURCE_DIR := $(LOCAL_PATH)/res
-LOCAL_AAPT_FLAGS := --auto-add-overlay
-
-LOCAL_PROGUARD_FLAG_FILES := proguard.flags
-
-LOCAL_CERTIFICATE := platform
-LOCAL_PRIVILEGED_MODULE := true
-
-LOCAL_JACK_ENABLED := disabled
-
-include $(BUILD_PACKAGE)
+LOCAL_SHARED_LIBRARIES := liblog libcutils libgui libbinder libutils
+LOCAL_SRC_FILES := libshim.cpp
+LOCAL_MODULE := libshim
+LOCAL_MODULE_TAGS := optional
+include $(BUILD_SHARED_LIBRARY)
